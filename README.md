@@ -8,7 +8,7 @@ Proyecto de katas de python
 ### Estructura del proyecto
 ``` bash
 --- Katas
------ Katas.py
+----- Katas_python.py
 ---README.md
 
 ```
@@ -19,7 +19,7 @@ Proyecto de katas de python
 
 
 ### Requisitos e instalación
-
+-Los requisitos necesarios es la instalación de Visual Studio Code junto con la extensión de Python y Git Hub 
 
 ### Recap Sessions
 
@@ -35,9 +35,14 @@ Proyecto de katas de python
 -Hacemos los primeros enunciados a modo de práctica y de ver como quedan los resultados
 
 #### Sesión 1
+-El inicio de la sesión 1 se ha realizado creando la estructura con la que se va a proceder a la redacción y ejecución de las katas
+
+-La estructura se basará en el enunciado, seguido de la creación del comando o programa pertinente, haciendo mención especial en las funciones donde se detallará que es lo que se va a realizar con la función. Posteriormente, se hace el comando de la función y finalmente se hace un ejemplo de como se usaría
+
+-Se han realizado los ejercicios del 4 al 17
 
 ### Resultados y conclusiones
-
+-Los resultados se encuentran en el archivo katas_python.py que encontramos dentro del repositorio. Ahí aparecerán detallados todos los enunciados así como las soluciones a esos enunciados. Además, en ciertos ejercicios aparecerán explicaciones del porqué esa ejecución, detallando las funciones o los pasos seguidos.
 
 ### Autores
 
