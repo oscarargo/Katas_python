@@ -1,9 +1,11 @@
 # Katas_python
 Proyecto de katas de python
 ### Descripción
-
+Este proyecto está basado en una serie de enunciados compartidos por la escuela the Power para la práctica y perfeccionamiento del uso de python.
+Forma parte del módulo 5 del máster de Data  & Analytics
 
  #### Objetivo principal del proyecto🎯
+ - Conseguir el perfeccionamiento en el uso del programa python y desarrollar habilidades como programador de python.
 
 ### Estructura del proyecto
 ``` bash
