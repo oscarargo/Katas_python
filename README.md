@@ -1,16 +1,14 @@
 # Katas_python
 Proyecto de katas de python
 ### Descripción
-Este proyecto está basado en una serie de enunciados compartidos por la escuela the Power para la práctica y perfeccionamiento del uso de python.
-Forma parte del módulo 5 del máster de Data  & Analytics
+Se trata de un exhaustivo conjunto de katas de python realizadas durante el máster de Data & Analitycs impartido por ThePower School
 
  #### Objetivo principal del proyecto🎯
- - Conseguir el perfeccionamiento en el uso del programa python y desarrollar habilidades como programador de python.
-
+Resolución de los enunciados de las katas de python para asimilar el conocimiento impartido durante las clases.
 ### Estructura del proyecto
 ``` bash
 --- Katas
------ Katas_python.py
+----- Katas.py
 ---README.md
 
 ```
@@ -21,7 +19,7 @@ Forma parte del módulo 5 del máster de Data  & Analytics
 
 
 ### Requisitos e instalación
--Los requisitos necesarios es la instalación de Visual Studio Code junto con la extensión de Python y Git Hub 
+Se requiere la plataforma Git Hub, Visual Studio Code y los paquetes instalados de python y jupyter notebook.
 
 ### Recap Sessions
 
@@ -37,14 +35,32 @@ Forma parte del módulo 5 del máster de Data  & Analytics
 -Hacemos los primeros enunciados a modo de práctica y de ver como quedan los resultados
 
 #### Sesión 1
--El inicio de la sesión 1 se ha realizado creando la estructura con la que se va a proceder a la redacción y ejecución de las katas
 
--La estructura se basará en el enunciado, seguido de la creación del comando o programa pertinente, haciendo mención especial en las funciones donde se detallará que es lo que se va a realizar con la función. Posteriormente, se hace el comando de la función y finalmente se hace un ejemplo de como se usaría
+- Seguimos realizando los ejercicios en la misma página de python 
 
--Se han realizado los ejercicios del 4 al 17
+- Modulamos el readme y seguimos avanzando en la sesión 1
+
+- Se hace una revisión de los nuevos ejercicios y de los antiguos para ver posibles mejoras de la codificación en python
+
+- Ejercicios del 5 al 15 completados
+
+#### Sesión 2
+
+- Se realiza una revisión del readme, explorando posibles fallos ortográficos e intentando modelar la redacción completa del readme
+
+- Se continúa avanzando en los ejercicios, se avanza del ejercicio 15 al 30
+
+#### Sesión 3
+
+- Se comienza con una revisión en la plataforma GitHub para valorar que todos los contenidos están subidos
+
+- Se completa la hoja enunciados desde el ejercicio 30 hasta el final.
+
+- Redacción del readme y subida de los archivos.
+
 
 ### Resultados y conclusiones
--Los resultados se encuentran en el archivo katas_python.py que encontramos dentro del repositorio. Ahí aparecerán detallados todos los enunciados así como las soluciones a esos enunciados. Además, en ciertos ejercicios aparecerán explicaciones del porqué esa ejecución, detallando las funciones o los pasos seguidos.
+Los resultados de los enunciados se encuentran en el archivo KAtas_python.py. Los resultados están detallados en los comandos y codificación del código listos para su ejecución
 
 ### Autores
 
