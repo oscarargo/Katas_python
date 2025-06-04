@@ -60,7 +60,7 @@ Se requiere la plataforma Git Hub, Visual Studio Code y los paquetes instalados 
 
 
 ### Resultados y conclusiones
-Los resultados de los enunciados se encuentran en el archivo KAtas_python.py. Los resultados están detallados en los comandos y codificación del código listos para su ejecución
+Los resultados de los enunciados se encuentran en el archivo Katas_python.py. Los resultados están detallados en los comandos y codificación del código listos para su ejecución
 
 ### Autores
 
