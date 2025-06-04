@@ -8,7 +8,7 @@ Resolución de los enunciados de las katas de python para asimilar el conocimien
 ### Estructura del proyecto
 ``` bash
 --- Katas
------ Katas.py
+----- Katas_python.py
 ---README.md
 
 ```
@@ -57,6 +57,14 @@ Se requiere la plataforma Git Hub, Visual Studio Code y los paquetes instalados 
 - Se completa la hoja enunciados desde el ejercicio 30 hasta el final.
 
 - Redacción del readme y subida de los archivos.
+
+#### Sesión final/ sesión 4
+
+- Se realiza una revisión exhaustiva de los enunciados
+
+- Se hacen los últimos cambios de los errores que aparecen
+
+- Se hace el código más limpio tras asistir a las clases de python del máster
 
 
 ### Resultados y conclusiones

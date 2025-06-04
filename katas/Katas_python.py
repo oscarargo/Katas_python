@@ -651,16 +651,18 @@ corriente. Proporciona métodos para realizar operaciones como retirar dinero, t
 agregar dinero al saldo.
  Código a seguir:
   Inicializar un usuario con su nombre, saldo y si tiene o no cuenta corriente mediante 
- Implementar el método 
-True y 
-False .
- retirar_dinero para retirar dinero del saldo del usuario. Lanzará un error en caso de no 
+ Implementar el método True y False .
+
+ Retirar_dinero para retirar dinero del saldo del usuario. Lanzará un error en caso de no 
 poder hacerse.
+
   Implementar el método 
 transferir_dinero para realizar una transferencia desde otro usuario al usuario actual. 
 Lanzará un error en caso de no poder hacerse.
+
  Implementar el método 
 agregar_dinero para agregar dinero al saldo del usuario.
+
  Caso de uso:
  Crear dos usuarios: "Alicia" con saldo inicial de 100 y "Bob" con saldo inicial de 50, ambos con cuenta corriente.
  Agregar 20 unidades de saldo de "Bob".
