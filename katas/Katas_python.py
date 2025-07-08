@@ -47,18 +47,9 @@ print(resultado)
 
 def calcular_diferencia(lista1,lista2):
     """
-    calcula la diferencia entre los valores de dos listas.
-    usa la función map()
-    1. Convierte las listas a conjuntos para eliminar duplicados.
-    2. Convierte los conjuntos a listas.
-    3. Usa la función map() para calcular la diferencia entre los valores de las listas.
-
-    Args:
-        lista1 (_type_): _description_
-        lista2 (_type_): _description_
+   Devuelve una lista con la diferencia elemento a elemento entre lista1 y lista2.
+    Usa map() y zip() para emparejar las listas sin eliminar duplicados.
     """
-    lista1= list(set(lista1))
-    lista2= list(set(lista2))
     return list(map(lambda x,y:x-y,lista1,lista2))
 # Como usaríamos la función
 lista1=[1,2,3,4,5]
@@ -69,26 +60,22 @@ print (resultado)
 #5  Escribe una función que tome una lista de números como parámetro y un valor opcional nota_aprobado, que por defecto es 5. La función debe calcular la media de los números en la lista y determinar si la media es mayor o igual que nota aprobado. Si es así, el estado será "aprobado", de lo contrario, será "suspenso". La función debe devolver una tupla que contenga la media y el estado.
 def calcular_media_y_estado(lista_numeros, nota_aprobado=5):
     """
-    Calcula la media de una lista de números y determina si es mayor o igual que la nota de aprobado.
-    la función devuelve una tupla con la media y el estado ("aprobado" o "suspenso")
-    1. Calcula la media de los números en la lista.
-    2. Compara la media con la nota de aprobado.
-    3. Devuelve una tupla con la media y el estado.
-    4. Si la lista está vacía, devuelve (0, "suspenso")
-    5. Si la lista contiene un solo número, devuelve ( número,"aprobado" o "suspenso")
-)
+   Calcula la media de una lista de números y determina si es aprobado o suspenso
+    devuelve una tupla (media,estado)
 
     Args:
         lista_numeros (_type_): _description_
         nota_aprobado (int, optional): _description_. Defaults to 5.
     """
-    if not lista_numeros:
+   if not lista_numeros:
         return (0,"suspenso")
-    if len(lista_numeros)==1:
-        return (lista_numeros[0], "aprobado" if lista_numeros[0] >=nota_aprobado else "suspenso")
-    media=sum(lista_numeros)/len(lista_numeros)
-    estado="aprobado" if media >= nota_aprobado else "suspenso"
-    return (media, estado)
+   if len(lista_numeros)==1:
+        valor=lista_numeros[0]
+        estado = "aprobado" if valor >= nota_aprobado else "suspenso"
+        return (valor, estado)
+   media = sum(lista_numeros) / len(lista_numeros)
+   estado = "aprobado" if media >= nota_aprobado else "suspenso"
+   return (media, estado)
 # como lo usaríamos
 lista_numeros= [0,1,7,8,9]
 resultado= calcular_media_y_estado(lista_numeros)
@@ -163,24 +150,22 @@ def filtrar_mascotas_prohibidas(lista_mascotas):
     Args:
         lista_mascotas (_type_): _description_
     """
-    mascotas_prohibidas = ["Mapache", "Tigre", " Serpiente Pitón", " Cocodrilo", "Oso"]
-    return list(filter(lambda mascota: mascota not in mascotas_prohibidas, lista_mascotas))
+   mascotas_prohibidas = ["Mapache","Tigre","Serpiente Pitón","Cocodrilo","Oso"]
+    return [m for m in lista_mascotas if m not in mascotas_prohibidas]
 #como lo usaríamos
 lista_mascotas = ["Perro", "Gato", "Mapache", "Tigre", "Serpiente Pitón", "Cocodrilo", "Oso"]
 resultado = filtrar_mascotas_prohibidas(lista_mascotas)
 print ( resultado)
 
 # 10 Escribe una función que reciba una lista de números y calcule su promedio. Si la lista está vacía, lanza una excepción personalizada y maneja el error adecuadamente.
+class ListaVaciaError(Exception):
+    """Excepción personalizada para manejar listas vacías."""
+    pass
+
 def promedio(lista):
     if not lista:
         raise ValueError("La lista está vacía.")
     return sum(lista) / len(lista)
-
-try:
-    print(promedio([10, 20, 30]))
-    print(promedio([]))
-except ValueError as e:
-    print("Error:", e)
 
 # 11 Escribe un programa que pida al usuario que introduzca su edad. Si el usuario ingresa un valor no numérico o un valor fuera del rango esperado (por ejemplo, menor que 0 o mayor que 120, maneja las excepciones adecuadamente.
 try:
@@ -416,39 +401,43 @@ print(f"El resto de la división entre {x} y {y} es: {resultado}")
 
 #27 Crea una función que calcule el promedio de una lista de números.
 # Definir la función para calcular el promedio
-def calcular_promedio(lista_numeros):
+def calcular_media_y_estado(lista_numeros):
     """
-    Calcula el promedio (media aritmética) de una lista de números.
+    Calcula la media aritmética de una lista de números y determina si la lista está vacía.
 
     Parámetros:
-        lista_numeros (list): Una lista de números (enteros o flotantes).
+        lista_numeros (list): Lista de números.
 
     Retorna:
-        float: El promedio de los números en la lista.
-        str: Un mensaje de error si la lista está vacía.
+        float: Media aritmética de la lista.
+
+    Lanza:
+        ValueError: Si la lista está vacía.
     """
-    if not lista_numeros:  # Comprobar si la lista está vacía
-        return "La lista está vacía, no se puede calcular el promedio."
+    if not lista_numeros:
+        raise ValueError("La lista está vacía, no se puede calcular el promedio.")
 
-    total_suma = sum(lista_numeros)  # Suma todos los números en la lista
-    cantidad_numeros = len(lista_numeros) # Obtiene la cantidad de números
+    return sum(lista_numeros) / len(lista_numeros)
 
-    promedio = total_suma / cantidad_numeros # Calcula el promedio
+def probar_lista(lista):
+    try:
+        media = calcular_media_y_estado(lista)
+        print(f"El promedio de {lista} es: {media}")
+    except ValueError as e:
+        print(f"Error con la lista {lista}: {e}")
 
-    return promedio
+# Pruebas
+listas = [
+    [1, 2, 3, 4, 5],
+    [10, 20, 30],
+    [7],
+    [],
+    [2.5, 3.5, 4.0]
+]
 
-# Probar la función con diferentes listas
-lista1 = [1, 2, 3, 4, 5]
-lista2 = [10, 20, 30]
-lista3 = [7]
-lista4 = []
-lista5 = [2.5, 3.5, 4.0]
-
-print(f"El promedio de {lista1} es: {calcular_promedio(lista1)}")
-print(f"El promedio de {lista2} es: {calcular_promedio(lista2)}")
-print(f"El promedio de {lista3} es: {calcular_promedio(lista3)}")
-print(f"El promedio de {lista4} es: {calcular_promedio(lista4)}")
-print(f"El promedio de {lista5} es: {calcular_promedio(lista5)}")
+for lista in listas:
+    probar_lista(lista)
+    
 
 # 28 Crea una función que busque y devuelva el primer elemento duplicado en una lista dada
 def primer_duplicado(lista):
@@ -753,10 +742,12 @@ def contar_palabras(texto):
     Returns:
         dict: Diccionario con palabras como claves y sus conteos como valores.
     """
-    palabras = texto.split()
+   import re
+
+    palabras = re.findall(r"\b\w+\b", texto.lower())
     conteo = {}
-    for palabra in palabras:
-        conteo[palabra] = conteo.get(palabra, 0) + 1
+    for p in palabras:
+        conteo[p] = conteo.get(p, 0) + 1
     return conteo
 def reemplazar_palabra(texto, palabra_original, palabra_nueva):
     """
