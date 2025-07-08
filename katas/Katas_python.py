@@ -153,7 +153,7 @@ def filtrar_mascotas_prohibidas(lista_mascotas):
    mascotas_prohibidas = ["Mapache","Tigre","Serpiente Pitón","Cocodrilo","Oso"]
     return [m for m in lista_mascotas if m not in mascotas_prohibidas]
 #como lo usaríamos
-lista_mascotas = ["Perro", "Gato", "Mapache", "Tigre", "Serpiente Pitón", "Cocodrilo", "Oso"]
+lista_mascotas = ["Perro","Gato","Mapache","Tigre","Serpiente Pitón","Cocodrilo","Oso"]
 resultado = filtrar_mascotas_prohibidas(lista_mascotas)
 print ( resultado)
 
